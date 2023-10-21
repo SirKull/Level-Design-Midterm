@@ -53,6 +53,10 @@ public class Hero : MonoBehaviour {
         overview.Looking();
         if (Input.GetMouseButtonDown(0)){
             GameObject go = overview.Search();
+            if(go != null && go.tag == "Destructible")
+            {
+                Destroy(go);
+            }
         }
 
         /* Change camera FOV state */
